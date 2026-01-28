@@ -3,94 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie List with Images</title>
+    <title>Ak Movies</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f5f5f5;
+            background-color: #1a1a1a;
+            color: #fff;
         }
-        h1 {
-            color: #2c3e50;
+        header {
+            background-color: #111;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
+        header h1 {
+            color: #f1c40f;
+            margin: 0;
+            font-size: 24px;
+        }
+        .search-box input {
+            padding: 8px 10px;
             font-size: 16px;
             border-radius: 5px;
-            border: 1px solid #ccc;
+            border: none;
+            width: 250px;
         }
-        .movie {
-            background-color: #fff;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
         }
-        .movie h2 {
-            margin: 0;
-            color: #2980b9;
+        .movie-card {
+            background-color: #222;
+            border: 2px solid #444;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
         }
-        .movie img {
-            max-width: 200px;
+        .movie-card:hover {
+            transform: translateY(-5px);
+            border-color: #f1c40f;
+        }
+        .movie-card img {
+            width: 100%;
             display: block;
-            margin: 10px 0;
-            border-radius: 5px;
         }
-        .movie p {
-            margin: 5px 0;
-            color: #555;
+        .movie-content {
+            padding: 10px;
         }
-        .movie a {
-            color: #e74c3c;
+        .movie-content h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .movie-content h2 a {
+            color: #f1c40f;
             text-decoration: none;
+        }
+        .movie-content h2 a:hover {
+            text-decoration: underline;
+        }
+        .movie-content p {
+            font-size: 14px;
+            color: #ccc;
+            margin: 5px 0;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .download-btn:hover {
+            background-color: #c0392b;
         }
     </style>
 </head>
 <body>
 
-    <h1>My Movie List</h1>
-    <input type="text" id="searchInput" onkeyup="searchMovies()" placeholder="Search for movies..">
+<header>
+    <h1>Ak Movies</h1>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search movies..." onkeyup="searchMovies()">
+    </div>
+</header>
 
-    <div class="movie-list">
-        <div class="movie">
-            <h2> <a href="https://www.imdb.com/title/tt0111161/" target="_blank">The Shawshank Redemption</a></h2>
-            <img src="https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_FMjpg_UX1200_.jpg" alt="Shawshank Redemption Poster">
+<div class="movie-grid" id="movieGrid">
+    <div class="movie-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmRhMC00ZDIzLWFmNTEtODM1ZmRlZDUzMjRiXkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_.jpg" alt="Shawshank Redemption">
+        <div class="movie-content">
+            <h2><a href="https://www.imdb.com/title/tt0111161/" target="_blank">The Shawshank Redemption</a></h2>
             <p>A story of hope and friendship in prison.</p>
-            <a href="https://www.imdb.com/title/tt0111161/" target="_blank">More Info</a>
+            <a href="https://www.example.com/download/shawshank" class="download-btn" target="_blank">Download Now</a>
         </div>
-        <div class="movie">
-            <h2><a href="https://www.imdb.com/title/tt1375666/" target="_blank">Inception</a> </h2>
-            <img src="https://m.media-amazon.com/images/I/51zUbui+gbL._AC_.jpg" alt="Inception Poster">
-            <p>A mind-bending thriller about dreams within dreams.</p>
-            <a href="https://www.imdb.com/title/tt1375666/" target="_blank">More Info</a>
-        </div>
-        <div class="movie">
-            <h2><a href="https://www.imdb.com/title/tt0816692/" target="_blank">Interstellar</a> </h2>
-            <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="Interstellar Poster">
-            <p>A space epic exploring love, time, and survival.</p>
-            <a href="https://www.imdb.com/title/tt0816692/" target="_blank">More Info</a>
-        </div>
-        <!-- Aap aur movies yahan add kar sakte ho -->
     </div>
 
-    <script>
-        function searchMovies() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const movies = document.getElementsByClassName('movie');
+    <div class="movie-card">
+        <img src="https://m.media-amazon.com/images/I/51zUbui+gbL._AC_.jpg" alt="Inception">
+        <div class="movie-content">
+            <h2><a href="https://www.imdb.com/title/tt1375666/" target="_blank">Inception</a></h2>
+            <p>A mind-bending thriller about dreams within dreams.</p>
+            <a href="https://www.example.com/download/inception" class="download-btn" target="_blank">Download Now</a>
+        </div>
+    </div>
 
-            for (let i = 0; i < movies.length; i++) {
-                const title = movies[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
-                const desc = movies[i].getElementsByTagName('p')[0].innerText.toLowerCase();
-                if (title.includes(input) || desc.includes(input)) {
-                    movies[i].style.display = "";
-                } else {
-                    movies[i].style.display = "none";
-                }
+    <div class="movie-card">
+        <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="Interstellar">
+        <div class="movie-content">
+            <h2><a href="https://www.imdb.com/title/tt0816692/" target="_blank">Interstellar</a></h2>
+            <p>A space epic exploring love, time, and survival.</p>
+            <a href="https://www.example.com/download/interstellar" class="download-btn" target="_blank">Download Now</a>
+        </div>
+    </div>
+
+    <!-- Aur movies add karne ke liye copy kare ye block -->
+</div>
+
+<script>
+    function searchMovies() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const cards = document.getElementsByClassName('movie-card');
+        for (let i = 0; i < cards.length; i++) {
+            const title = cards[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+            const desc = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+            if (title.includes(input) || desc.includes(input)) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
             }
         }
-    </script>
+    }
+</script>
 
 </body>
 </html>
