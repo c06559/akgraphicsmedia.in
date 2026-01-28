@@ -1,13 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <script>
-    window.location.replace("/");
-  </script>
+<meta charset="UTF-8">
+<title>404 | Terminal Error</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  :root {
+    --bg: #000;
+    --text: #00ff66;
+    --accent: #00ffd5;
+  }
+
+  body.neon {
+    --bg: #000;
+    --text: #39ff14;
+    --accent: #00ffff;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Courier New", monospace;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .terminal {
+    width: 92%;
+    max-width: 900px;
+    border: 1px solid var(--text);
+    padding: 20px;
+    box-shadow: 0 0 30px var(--text);
+  }
+
+  .line {
+    white-space: pre-wrap;
+    line-height: 1.5;
+  }
+
+  .blink {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%,50% { opacity: 1; }
+    51%,100% { opacity: 0; }
+  }
+
+  .bar {
+    width: 100%;
+    height: 10px;
+    border: 1px solid var(--accent);
+    margin-top: 10px;
+  }
+
+  .fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    transition: width 1s linear;
+  }
+
+  .count {
+    color: var(--accent);
+  }
+
+  .hint {
+    opacity: 0.6;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+</style>
 </head>
+
 <body>
-  <p>Redirecting to home page...</p>
+<div class="terminal" id="term"></div>
+
+<script>
+const terminal = document.getElementById("term");
+const lines = [
+`██╗  ██╗ █████╗  ██████╗ ██████╗ `,
+`██║ ██╔╝██╔══██╗██╔════╝ ██╔══██╗`,
+`█████╔╝ ███████║██║  ███╗██████╔╝`,
+`██╔═██╗ ██╔══██║██║   ██║██╔═══╝ `,
+`██║  ██╗██║  ██║╚██████╔╝██║     `,
+`╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     `,
+`      AK GRAPHICS MEDIA`,
+``,
+`root@kali:~# cd /admin`,
+`bash: cd: /admin: No such file or directory`,
+``,
+`root@kali:~# systemctl status website`,
+`● website.service - Running`,
+`   Loaded: loaded (/etc/systemd/system/site.service)`,
+`   Active: active (running)`,
+``,
+`root@kali:~# ERROR 404 : PAGE NOT FOUND`,
+`Initializing safe redirect...`
+];
+
+let lineIndex = 0;
+let charIndex = 0;
+let seconds = 10;
+
+function typeLine() {
+  if (lineIndex >= lines.length) {
+    startRedirect();
+    return;
+  }
+
+  if (charIndex === 0) {
+    const div = document.createElement("div");
+    div.className = "line";
+    terminal.appendChild(div);
+  }
+
+  const currentLine = lines[lineIndex];
+  const divs = terminal.getElementsByClassName("line");
+  divs[divs.length - 1].textContent += currentLine.charAt(charIndex);
+
+  charIndex++;
+
+  if (charIndex < currentLine.length) {
+    setTimeout(typeLine, 25);
+  } else {
+    charIndex = 0;
+    lineIndex++;
+    setTimeout(typeLine, 300);
+  }
+}
+
+function startRedirect() {
+  terminal.innerHTML += `
+  <div class="line">Redirecting to home in <span class="count" id="sec">10</span>s <span class="blink">█</span></div>
+  <div class="bar"><div class="fill" id="fill"></div></div>
+  <div class="hint">Press <b>T</b> to toggle neon theme</div>
+  `;
+
+  const fill = document.getElementById("fill");
+
+  const timer = setInterval(() => {
+    document.getElementById("sec").innerText = seconds;
+    fill.style.width = (100 - seconds * 10) + "%";
+    if (seconds === 0) {
+      window.location.replace("/");
+    }
+    seconds--;
+  }, 1000);
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key.toLowerCase() === "t") {
+    document.body.classList.toggle("neon");
+  }
+});
+
+typeLine();
+</script>
 </body>
 </html>
