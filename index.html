@@ -3,208 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-361NZ85YH1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-361NZ85YH1');
-</script>
-    <title>Ak Movies</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #fff;
-        }
-        header {
-            background-color: #111;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 {
-            color: #f1c40f;
-            margin: 0;
-            font-size: 24px;
-        }
-        .search-box input {
-            padding: 8px 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            width: 250px;
-        }
-        .movie-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            padding: 20px;
-        }
-        .movie-card {
-            background-color: #222;
-            border: 2px solid #444;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        .movie-card:hover {
-            transform: translateY(-5px);
-            border-color: #f1c40f;
-        }
-        .movie-card img {
-            width: 100%;
-            display: block;
-        }
-        .movie-content {
-            padding: 10px;
-        }
-        .movie-content h2 {
-            margin: 0;
-            font-size: 18px;
-        }
-        .movie-content h2 a {
-            color: #f1c40f;
-            text-decoration: none;
-        }
-        .movie-content h2 a:hover {
-            text-decoration: underline;
-        }
-        .movie-content p {
-            font-size: 14px;
-            color: #ccc;
-            margin: 5px 0;
-        }
-        .download-btn {
-            display: inline-block;
-            padding: 5px 10px;
-            background-color: #e74c3c;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        .download-btn:hover {
-            background-color: #c0392b;
-        }
-    </style>
+    <title>Ak Store | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Ak Movies</h1>
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search movies..." onkeyup="searchMovies()">
-    </div>
-</header>
+    <header>
+        <div class="logo"><a href="/">AK<span>Store</span></a></div>
+        
+        <div class="location">
+            <span>Delivering to</span>
+            <strong>India</strong>
+        </div>
 
-<div class="movie-grid" id="movieGrid">
-    <div class="movie-card">
-        <img src="images/vaa-vaathiyaar.webp" alt="vaa-vaathiyaar">
-        <div class="movie-content">
-            <h2>Vaa Vaathiyaar (2026)</h2>
-            <p>After being raised as the reincarnation of a famous actor, a man finds himself clashing with his grandfather’s expectations of him.</p>
-            <a href="https://m4ulinks.com/number/48195" class="download-btn" target="_blank">Download Now</a>
+        <div class="search-container">
+            <select class="search-select">
+                <option value="all">All</option>
+            </select>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search AK Graphics Media...">
+            <button class="search-btn" onclick="searchProducts()">🔍</button>
         </div>
-    </div>
+        
+        </header>
 
-    <div class="movie-card">
-        <img src="images/anaconda.webp" alt="anaconda">
-        <div class="movie-content">
-            <h2>Anaconda (2025)</h2>
-            <p>A group of friends facing mid-life crises head to the rainforest with the intention of remaking their favorite movie from their youth, only to find themselves in a fight for their lives against natural disasters, giant snakes and violent criminals.</p>
-            <a href="https://m4ulinks.com/number/48187" class="download-btn" target="_blank">Download Now</a>
-        </div>
-    </div>
+    <div class="sub-header">
+        <div class="all-btn">☰ All</div>
 
-    <div class="movie-card">
-        <img src="images/shambhala.webp" alt="shambhala">
-        <div class="movie-content">
-            <h2>Shambhala (2025)</h2>
-            <p>When a meteor crashes into the highly superstitious village of Shambhala in the 1980s, strange supernatural events unfold, forcing an atheist scientist to face an ancient horror-one that science can’t explain or escape.</p>
-            <a href="https://m4ulinks.com/number/48174" class="download-btn" target="_blank">Download Now</a>
+        <div class="dropdown">
+            <button class="dropbtn">Mobiles & Accessories ▼</button>
+            <div class="dropdown-content">
+                <a href="mobile.html">Mobiles</a>
+                <a href="#">Mobile Covers</a>
+                <a href="#">Chargers & Cables</a>
+                <a href="#">Powerbanks</a>
+                <a href="#">Mobile Stand</a>
+                <a href="#">Earphones</a>
+            </div>
         </div>
-    </div>
-    <div class="movie-card">
-        <img src="images/border-2.webp" alt="Border 2 (2026)">
-        <div class="movie-content">
-            <h2>Border 2 (2026)</h2>
-            <p>Young Indian fighters prepared to protect their homeland from a greater threat during the 1971 Indo-Pak war.</p>
-            <a href="https://m4ulinks.com/number/48148" class="download-btn" target="_blank">Download Now</a>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Laptops & Accessories ▼</button>
+            <div class="dropdown-content">
+                <a href="#">Gaming Laptops</a>
+                <a href="#">Office Laptops</a>
+                <a href="#">Mouse & Keyboards</a>
+                <a href="#">Laptop Bags</a>
+                <a href="#">Hard Drives / SSD</a>
+                <a href="#">Pen Drives</a>
+            </div>
         </div>
-    </div>
-    <div class="movie-card">
-        <img src="images/zootopia-2.webp" alt="Zootopia 2 (2025)">
-        <div class="movie-content">
-            <h2>Zootopia 2 (2025)</h2>
-            <p>After cracking the biggest case in Zootopia’s history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De’Snake arrives and turns the animal metropolis upside down.</p>
-            <a href="https://m4ulinks.com/number/47145" class="download-btn" target="_blank">Download Now</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Watches ▼</button>
+            <div class="dropdown-content">
+                <a href="#">Smartwatches</a>
+                <a href="#">Men's Watches</a>
+                <a href="#">Women's Watches</a>
+                <a href="#">Kids' Watches</a>
+            </div>
         </div>
-    </div>
-    <div class="movie-card">
-        <img src="images/45-2025.webp" alt="45 (2025)">
-        <div class="movie-content">
-            <h2>45 (2025)</h2>
-            <p>A gripping tale of life, love, and destiny, filled with raw emotions, intense drama and high-octane action.</p>
-            <a href="https://m4ulinks.com/number/47606" class="download-btn" target="_blank">Download Now</a>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Home & Kitchen ▼</button>
+            <div class="dropdown-content">
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Home Decor</a>
+                <a href="#">Bedding</a>
+                <a href="#">Furniture</a>
+                <a href="#">Lighting</a>
+            </div>
         </div>
-    </div>
-    <div class="movie-card">
-        <img src="images/space-gen-chandrayaan.webp" alt="Space Gen: Chandrayaan (2026) Season 1">
-        <div class="movie-content">
-            <h2>Space Gen: Chandrayaan (2026) Season 1</h2>
-            <p>Indian space engineers face mounting pressure to redeem themselves following the Chandrayaan 2 lunar mission’s unexpected outcome.</p>
-            <a href="https://m4ulinks.com/number/48127" class="download-btn" target="_blank">Download Now</a>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Fashion ▼</button>
+            <div class="dropdown-content">
+                <a href="#">Men's Clothing</a>
+                <a href="#">Women's Clothing</a>
+                <a href="#">Kids' Fashion</a>
+                <a href="#">Shoes & Footwear</a>
+                <a href="#">Bags & Luggage</a>
+            </div>
         </div>
-    </div>
-    <div class="movie-card">
-        <img src="images/tere-ishk-mein.webp" alt="Tere Ishk Mein (2025)">
-        <div class="movie-content">
-            <h2>Tere Ishk Mein (2025)</h2>
-            <p>Shankar and Mukti’s intense love story unfolds against the backdrop of Benaras, exploring surrender and transformation through an all-consuming romance that heals, hurts, and changes them</p>
-            <a href="https://m4ulinks.com/number/46864" class="download-btn" target="_blank">Download Now</a>
-        </div>
-    </div>
-    <div class="movie-card">
-        <img src="images/Mark.webp" alt="Interstellar">
-        <div class="movie-content">
-            <h2>Mark (2025) [Tamil + Telugu + Malayalam + Kannada]</h2>
-            <p>A suspended police officer confronts criminals and corrupt politicians terrorizing the state. As violence erupts, he returns to duty to defeat the villains and restore justice.</p>
-            <a href="https://m4ulinks.com/number/48129" class="download-btn" target="_blank">Download Now</a>
-        </div>
-    </div>
-    <div class="movie-card">
-        <img src="images/the-rajasaab.webp" alt="The Raja Saab (2026)">
-        <div class="movie-content">
-            <h2>The Raja Saab (2026)</h2>
-            <p>A young heir embraces both his royal heritage and rebellious spirit as he rises to power, establishing unprecedented rules during his reign as Raja Saab.</p>
-            <a href="https://m4ulinks.com/number/47822" class="download-btn" target="_blank">Download Now</a>
-        </div>
+
     </div>
 
-    <!-- Aur movies add karne ke liye copy kare ye block -->
-</div>
+    <div class="hero-section">
+    </div>
 
-<script>
-    function searchMovies() {
-        const input = document.getElementById('searchInput').value.toLowerCase();
-        const cards = document.getElementsByClassName('movie-card');
-        for (let i = 0; i < cards.length; i++) {
-            const title = cards[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
-            const desc = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
-            if (title.includes(input) || desc.includes(input)) {
-                cards[i].style.display = "";
-            } else {
-                cards[i].style.display = "none";
-            }
-        }
-    }
-</script>
+    <div class="content-container" id="productGrid">
+        
+        <div id="no-results">No products found matching your search.</div>
+           <a href="mobile.html"  class="card product-item">
+                <h2>Mobiles</h2>
+                  <div class="card-image">
+                  <img src="https://m.media-amazon.com/images/I/71JGCn1z1TL._SX679_.jpg" alt="Design">
+                 </div>
+            <p>See More</p>
+        </a>
+<a href="#"  class="card product-item">
+                OR Products Comming Soon
+        </a>
+       
+       
 
+    </div>
+
+    <div class="back-to-top" onclick="window.scrollTo(0,0)">Back to top</div>
+    <footer>
+        <p>© 2026, Akgraphicsmedia.in. All rights reserved.</p>
+    </footer>
+
+    
+<script src="script.js"></script>
 </body>
 </html>
-

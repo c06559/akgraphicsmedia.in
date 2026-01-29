@@ -1,0 +1,376 @@
+
+        /* --- RESET & BASIC STYLES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e3e6e6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        /* --- HEADER SECTION --- */
+        header {
+            background-color: #131921;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            gap: 20px;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            color: white;
+            white-space: nowrap; /* Logo k text ko ek line me rakhne ke liye */
+        }
+
+        .logo span {
+            color: #febd69;
+            font-style: italic;
+        }
+
+        /* Location Box */
+        .location {
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            color: #ccc;
+            margin-left: 10px;
+            min-width: 80px;
+        }
+        .location strong {
+            font-size: 14px;
+            color: white;
+        }
+
+        /* Search Bar (Updated Layout) */
+        .search-container {
+            flex-grow: 1;
+            display: flex;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-left: 20px;
+            max-width: 800px; /* Search bar ko jyada chouda hone se rokne ke liye */
+        }
+
+        .search-select {
+            background-color: #f3f3f3;
+            border: none;
+            padding: 10px;
+            font-size: 12px;
+            color: #555;
+            border-right: 1px solid #cdcdcd;
+            cursor: pointer;
+        }
+
+        .search-input {
+            width: 100%;
+            border: none;
+            padding: 10px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .search-btn {
+            background-color: #febd69;
+            border: none;
+            padding: 0 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        
+        .search-btn:hover {
+            background-color: #f3a847;
+        }
+
+        /* Right side navigation REMOVED as requested */
+
+       /* --- SUB-HEADER (Updated for Dropdowns) --- */
+        .sub-header {
+            background-color: #232f3e;
+            color: white;
+            padding: 0 20px; /* Padding reduced to fit height */
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 40px;
+            position: relative;
+            z-index: 100; /* Dropdown ko upar dikhane ke liye */
+        }
+
+        /* Dropdown Container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            height: 100%;
+        }
+
+        /* The Main Category Button */
+        .dropbtn {
+            background-color: transparent;
+            color: white;
+            padding: 0 10px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            height: 100%; /* Full height for easy hovering */
+            display: flex;
+            align-items: center;
+        }
+
+        /* The Dropdown Content (Hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 220px; /* Width of the popup box */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            top: 40px; /* Push it below the header */
+            left: 0;
+            border-radius: 0 0 4px 4px;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 13px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Change color of links on hover */
+        .dropdown-content a:hover {
+            background-color: #e3e6e6;
+            color: #C7511F; /* Amazon Orange for hover */
+            text-decoration: underline;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Style for the "All" button */
+        .all-btn {
+            font-weight: bold;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        /* --- HERO SECTION --- */
+        .hero-section {
+            background-color: #eaeded; 
+            position: relative;
+            height: 350px;
+            background-image: linear-gradient(to bottom, transparent 10%, #f3a847 100%), url('https://placehold.co/1500x600/232f3e/white?text=Welcome+to+Ak+Store');
+          
+            background-size:cover;
+            background-position: center;
+            margin-bottom: -150px;
+            z-index: 1;
+        }
+
+        /* --- PRODUCT GRID --- */
+        .content-container {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 400px;
+            cursor: pointer;
+            transition: box-shadow 0.2s;
+        }
+        
+        .card:hover {
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            font-size: 21px;
+            margin-bottom: 10px;
+            color: #0F1111;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            background-color: #f7f7f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .card a {
+            font-size: 13px;
+            color: #007185;
+            margin-top: auto;
+        }
+        
+        /* Message when no products match search */
+        #no-results {
+            display: none;
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #232f3e;
+            color: #dddddd;
+            text-align: center;
+            padding: 40px;
+            margin-top: 40px;
+            font-size: 12px;
+        }
+        
+        .back-to-top {
+            background-color: #37475a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .location { display: none; }
+            .search-container { margin-left: 0; }
+        }
+      /* --- BODY CONTENT (Sub Category Page) --- */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .category-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* Product Grid System */
+        .product-grid {
+            display: grid;
+            /* Creates a responsive grid: min 250px width, fills space */
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+            gap: 20px;
+        }
+
+        /* The Clickable Card Link */
+        .product-card-link {
+            text-decoration: none; /* Removes underline from link */
+            color: inherit; /* Inherits text color */
+            display: block; /* Makes the A tag act like a div */
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        /* The Card Design */
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px; /* Slightly rounded corners */
+            padding: 15px;
+            height: 100%; /* Ensures equal height in row */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card-link:hover .product-card {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: #bbb;
+        }
+
+        .product-image-container {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+        }
+
+        .product-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-info h3 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.4;
+            color: #0F1111;
+            margin: 0 0 10px 0;
+            /* Limits text to 2 lines */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .price-section {
+            margin-top: auto; /* Pushes price to bottom */
+        }
+
+        .mrp {
+            font-size: 13px;
+            color: #565959;
+            text-decoration: line-through;
+            margin-right: 8px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #B12704; /* Amazon Red Price Color */
+        }
