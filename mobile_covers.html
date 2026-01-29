@@ -1,157 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | Terminal</title>
-    <style>
-        /* Modern Terminal Aesthetic */
-        body {
-            background-color: #0d1117;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Fira Code', 'Courier New', Courier, monospace;
-        }
-
-        .terminal-container {
-            width: 90%;
-            max-width: 700px;
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-            overflow: hidden;
-        }
-
-        /* Window Header Bar */
-        .terminal-header {
-            background: #21262d;
-            padding: 12px;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #30363d;
-        }
-
-        .dot {
-            height: 12px;
-            width: 12px;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
-
-        .red { background: #ff5f56; }
-        .yellow { background: #ffbd2e; }
-        .green { background: #27c93f; }
-
-        .title {
-            color: #8b949e;
-            font-size: 13px;
-            margin-left: 10px;
-            letter-spacing: 0.5px;
-        }
-
-        /* Terminal Text Area */
-        .terminal-body {
-            padding: 25px;
-            color: #79c0ff; /* GitHub's bright blue */
-            font-size: 16px;
-            line-height: 1.6;
-            min-height: 200px;
-        }
-
-        .command { color: #aff5b4; } /* Green for commands */
-        .output { color: #c9d1d9; }  /* Off-white for general text */
-        .warning { color: #ffa657; } /* Orange for warnings/status */
-
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background-color: #58a6ff;
-            vertical-align: middle;
-            margin-left: 4px;
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            from, to { background-color: transparent; }
-            50% { background-color: #58a6ff; }
-        }
-    </style>
+    <title>Mobiles - AK Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        <div class="logo"><a href="/">AK<span>Store</span></a></div>
 
-<div class="terminal-container">
-    <div class="terminal-header">
-        <div class="dot red"></div>
-        <div class="dot yellow"></div>
-        <div class="dot green"></div>
-        <span class="title">guest@portfolio: ~/coming-soon</span>
+        <div class="location">
+            <span>Delivering to</span>
+            <strong>India</strong>
+        </div>
+
+        <div class="search-container">
+            <select class="search-select">
+                <option value="all">All</option>
+            </select>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search AK Graphics Media...">
+            <button class="search-btn" onclick="searchProducts()">🔍</button>
+        </div>
+
+    </header>
+
+    <div class="sub-header">
+        <div class="all-btn">☰ All</div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Mobiles & Accessories ▼</button>
+            <div class="dropdown-content">
+                <a href="mobile">Mobiles</a>
+                <a href="mobile_covers">Mobile Covers</a>
+                <a href="chargers_cables">Chargers & Cables</a>
+                <a href="powerbanks">Powerbanks</a>
+                <a href="mobile_stands">Mobile Stands</a>
+                <a href="earphones">Earphones</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Laptops & Accessories ▼</button>
+            <div class="dropdown-content">
+                <a href="gaming_laptops">Gaming Laptops</a>
+                <a href="office_laptops">Office Laptops</a>
+                <a href="mouse_keyboards">Mouse & Keyboards</a>
+                <a href="laptop_bags">Laptop Bags</a>
+                <a href="hard_drives">Hard Drives / SSD</a>
+                <a href="pen_drives">Pen Drives</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Watches ▼</button>
+            <div class="dropdown-content">
+                <a href="smartwatches">Smartwatches</a>
+                <a href="men_watches">Men's Watches</a>
+                <a href="women_watches">Women's Watches</a>
+                <a href="kids_watches">Kids' Watches</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Home & Kitchen ▼</button>
+            <div class="dropdown-content">
+                <a href="kitchen_appliances">Kitchen Appliances</a>
+                <a href="home_decore">Home Decor</a>
+                <a href="bedding">Bedding</a>
+                <a href="furniture">Furniture</a>
+                <a href="lighting">Lighting</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Fashion ▼</button>
+            <div class="dropdown-content">
+                <a href="men_clothings">Men's Clothing</a>
+                <a href="women_clothings">Women's Clothing</a>
+                <a href="kids_fashions">Kids' Fashions</a>
+                <a href="shoes_footwear">Shoes & Footwear</a>
+                <a href="bags_luggage">Bags & Luggage</a>
+            </div>
+        </div>
+
     </div>
-    <div class="terminal-body">
-        <span id="typewriter"></span><span class="cursor"></span>
+
+    <div class="main-content">
+
+        <h1 class="category-title">Mobiles</h1>
+
+        <div class="product-grid">
+
+            <a href="https://amzn.to/4kcpvfo" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71Rrk+xbZSL._SX522_.jpg" alt="Mobile"
+                            class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Complete Protection Flip Case for Samsung Galaxy
+                            M04 / F04 / A04e(Blue)</h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4t82uOG" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/61pWH3nu0YL._SX522_.jpg" alt="Mobile"
+                            class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mobile flip Cover for Oppo Reno 15 5G Back Cover
+                            | Premium Protective Mobile Case</h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹149</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4q6LXrw
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71rWAsKgNlL._SX679_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Complete Protection Flip Case for Redmi 12 5G /
+                            Poco M6 Pro 5G(Blue)
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4q51IPy
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71SjHKm-OtL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>WOW IMAGINE Shock Proof Flip Cover Back Case
+                            Cover for Mi Redmi 12 5G | Redmi 12 4G | Poco
+                            M6 Pro 5G
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹149</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4q52ImM
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71BObKFUMZL._SX679_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Complete Protection Flip Case for Samsung Galaxy
+                            M35 5G (Blue)
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4q53AYA
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/81E1hAJyroL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>PULOKA - Mobile Cover for iPhone 15 PRO MAX -
+                            Horse Embroidery - Sleek & Stylish
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹2,999</span>
+                            <span class="price">₹799</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4q1XLLt
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/81-jE8vZ7HL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>PULOKA Magfit Mobile Back Cover - Compatible
+                            with iPhone 15 PRO MAX - Mag-Safe Design
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹2,999</span>
+                            <span class="price">₹699</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/3ZJ8QX2
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/6137IhApJvL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>CEDO Redmi 10A / Poco C31 (4G) Flip Cover |
+                            Leather Finish | Inside Pockets & Inbuilt Stand
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4blWr2w
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/81pJIyRoKoL._SX569_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Zapcase Back Case Cover for Samsung F62 /
+                            Samsung M62 | Compatible for Samsung F62 /
+                            Samsung
+                            M62 Back Cover
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹399</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/3Z2Cbf1
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71t2e2uXThL._SX679_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mobile Cover (Soft, Flexible & Kickstand Back
+                            case) Compatible for Motorola Moto G9 (Blue)
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹499</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/45BslnY
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71lGlbVDomL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Complete Protection Flip Case for Samsung Galaxy
+                            M12 / F12 / A12(Brown)
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/46iv2ek
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71BObKFUMZL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Complete Protection Flip Case for Samsung Galaxy
+                            F15 5G / M15 5G / M15 Prime 5G(Blue)
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/3M0V2nN
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71ZccZcoxsL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Complete Protection Flip Case for Samsung Galaxy
+                            M31 / F41 / M31 Prime(Coffee)
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4q4PG8O
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/61IDCGV20jL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>WOW IMAGINE Shock Proof Clear Protective Back
+                            Case for Samsung Galaxy M36 5G
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹79</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4687mJC
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/61+VcFpzfwL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>WOW IMAGINE Shock Proof Flip Cover Back Case
+                            Cover for Redmi A4 5G | Poco C75 5G | 14C 5G |
+                            Poco M7
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/49LVMpU
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/610wBu-e1tL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mobile flip Cover for OnePlus 15R Flip Magnet
+                            Cover with Card Holder
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4brj9pZ
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71U8uJuiNrL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Excelsior Flip Cover for Samsung Galaxy A17, F17
+                            | Premium PU Leather | Full Protection
+                            (Black)
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹1,999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4toRFbh
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/718oL+-8cdL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>WOW IMAGINE Shock Proof Flip Cover Back Case
+                            Cover for Xiaomi Mi Redmi 13C 5G | Redmi 13C 4G
+                            | Poco M6 5G | Poco C65
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/4qLfPdX" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/61Ai1YdNXIL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>CEDO Samsung Galaxy M31 / F41 / M31 Prime Back
+                            Cover | Camera Bump Protection & Ultra Slim
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹999</span>
+                            <span class="price">₹99</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://amzn.to/3NO0zi0
+" class="product-card-link">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://m.media-amazon.com/images/I/817cU8ypfqL._SX522_.jpg
+" alt="Mobile" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vivo Y17S Flip Back Cover Case | Denim Fabric |
+                            Eco-Friendly Leather
+                        </h3>
+                        <div class="price-section">
+                            <span class="mrp">₹1,499</span>
+                            <span class="price">₹199</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
     </div>
-</div>
-
-<script>
-    const content = [
-        { text: "visitor@github:~$ ", type: "command" },
-        { text: "npm install future-project\n", type: "output" },
-        { text: "Fetching packages...\n", type: "output" },
-        { text: "Success: ", type: "output" },
-        { text: "COMING_SOON.v1.0.0 installed.\n", type: "warning" },
-        { text: "System Status: ", type: "output" },
-        { text: "In Development\n", type: "warning" },
-        { text: "Launch Window: ", type: "output" },
-        { text: "Spring 2026\n", type: "command" },
-        { text: "visitor@github:~$ ", type: "command" },
-        { text: "ping status...", type: "output" }
-    ];
-
-    const target = document.getElementById("typewriter");
-    let lineIndex = 0;
-    let charIndex = 0;
-
-    function type() {
-        if (lineIndex < content.length) {
-            let currentLine = content[lineIndex];
-            
-            // Create a span for the style if we are at the start of a new segment
-            if (charIndex === 0) {
-                const span = document.createElement("span");
-                span.className = currentLine.type;
-                span.id = "line-" + lineIndex;
-                target.appendChild(span);
-            }
-
-            let span = document.getElementById("line-" + lineIndex);
-            let char = currentLine.text.charAt(charIndex);
-            
-            // Handle line breaks
-            if (char === "\n") {
-                span.innerHTML += "<br>";
-            } else {
-                span.innerHTML += char;
-            }
-
-            charIndex++;
-
-            if (charIndex < currentLine.text.length) {
-                setTimeout(type, 40); // Typing speed
-            } else {
-                charIndex = 0;
-                lineIndex++;
-                setTimeout(type, 300); // Delay between lines
-            }
-        }
-    }
-
-    // Initialize typing
-    window.onload = type;
-</script>
-
+    <div class="back-to-top" onclick="window.scrollTo(0,0)">Back to
+        top</div>
+    <footer>
+        <p>© 2026, Akgraphicsmedia.in. All rights reserved.</p>
+    </footer>
+    <script src="script1.js"></script>
 </body>
+
 </html>
