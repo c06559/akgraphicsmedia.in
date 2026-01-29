@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Terminal</title>
+    <style>
+        /* Modern Terminal Aesthetic */
+        body {
+            background-color: #0d1117;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+        }
+
+        .terminal-container {
+            width: 90%;
+            max-width: 700px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            overflow: hidden;
+        }
+
+        /* Window Header Bar */
+        .terminal-header {
+            background: #21262d;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+
+        .title {
+            color: #8b949e;
+            font-size: 13px;
+            margin-left: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Terminal Text Area */
+        .terminal-body {
+            padding: 25px;
+            color: #79c0ff; /* GitHub's bright blue */
+            font-size: 16px;
+            line-height: 1.6;
+            min-height: 200px;
+        }
+
+        .command { color: #aff5b4; } /* Green for commands */
+        .output { color: #c9d1d9; }  /* Off-white for general text */
+        .warning { color: #ffa657; } /* Orange for warnings/status */
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: #58a6ff;
+            vertical-align: middle;
+            margin-left: 4px;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { background-color: transparent; }
+            50% { background-color: #58a6ff; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="terminal-container">
+    <div class="terminal-header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+        <span class="title">guest@portfolio: ~/coming-soon</span>
+    </div>
+    <div class="terminal-body">
+        <span id="typewriter"></span><span class="cursor"></span>
+    </div>
+</div>
+
+<script>
+    const content = [
+        { text: "visitor@github:~$ ", type: "command" },
+        { text: "npm install future-project\n", type: "output" },
+        { text: "Fetching packages...\n", type: "output" },
+        { text: "Success: ", type: "output" },
+        { text: "COMING_SOON.v1.0.0 installed.\n", type: "warning" },
+        { text: "System Status: ", type: "output" },
+        { text: "In Development\n", type: "warning" },
+        { text: "Launch Window: ", type: "output" },
+        { text: "Spring 2026\n", type: "command" },
+        { text: "visitor@github:~$ ", type: "command" },
+        { text: "ping status...", type: "output" }
+    ];
+
+    const target = document.getElementById("typewriter");
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+        if (lineIndex < content.length) {
+            let currentLine = content[lineIndex];
+            
+            // Create a span for the style if we are at the start of a new segment
+            if (charIndex === 0) {
+                const span = document.createElement("span");
+                span.className = currentLine.type;
+                span.id = "line-" + lineIndex;
+                target.appendChild(span);
+            }
+
+            let span = document.getElementById("line-" + lineIndex);
+            let char = currentLine.text.charAt(charIndex);
+            
+            // Handle line breaks
+            if (char === "\n") {
+                span.innerHTML += "<br>";
+            } else {
+                span.innerHTML += char;
+            }
+
+            charIndex++;
+
+            if (charIndex < currentLine.text.length) {
+                setTimeout(type, 40); // Typing speed
+            } else {
+                charIndex = 0;
+                lineIndex++;
+                setTimeout(type, 300); // Delay between lines
+            }
+        }
+    }
+
+    // Initialize typing
+    window.onload = type;
+</script>
+
+</body>
+</html>
