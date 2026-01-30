@@ -19,6 +19,108 @@
     <loc>https://akgraphicsmedia.in/mobile</loc>
     <priority>0.8</priority>
   </url>
-  
+<url>
+    <loc> https://akgraphicsmedia.in/mobile_covers</loc>
+    <priority>0.8</priority>
+  </url>
+ <url>
+    <loc> https://akgraphicsmedia.in/chargers_cables    </loc>
+    <priority>0.8</priority>
+  </url>
+ <url>
+    <loc> https://akgraphicsmedia.in/powerbanks    </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc> https://akgraphicsmedia.in/mobile_stands    </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>  https://akgraphicsmedia.in/earphones   </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>   https://akgraphicsmedia.in/gaming_laptops  </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>  https://akgraphicsmedia.in/office_laptops   </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>  https://akgraphicsmedia.in/mouse_keyboards   </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>   https://akgraphicsmedia.in/laptop_bags  </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>  https://akgraphicsmedia.in/hard_drives   </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc> https://akgraphicsmedia.in/pen_drives    </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>  https://akgraphicsmedia.in/smartwatches   </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>  https://akgraphicsmedia.in/men_watches   </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>https://akgraphicsmedia.in/women_watches     </loc>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc> https://akgraphicsmedia.in/kids_watches    </loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>     https://akgraphicsmedia.in/kitchen_appliances </loc>
+    <priority>0.8</priority>
+  </url>
 
+  <url>
+    <loc> https://akgraphicsmedia.in/home_decore     </loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>    https://akgraphicsmedia.in/bedding  </loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc> https://akgraphicsmedia.in/furniture     </loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>  https://akgraphicsmedia.in/lighting    </loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>  https://akgraphicsmedia.in/men_clothings    </loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc> https://akgraphicsmedia.in/women_clothings     </loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>   https://akgraphicsmedia.in/kids_fashions   </loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>   https://akgraphicsmedia.in/shoes_footwear   </loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>   https://akgraphicsmedia.in/bags_luggage   </loc>
+    <priority>0.8</priority>
+  </url>
+
+  
+  
 </urlset>
