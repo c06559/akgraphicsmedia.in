@@ -173,18 +173,7 @@
             margin-right: 10px;
             cursor: pointer;
         }
-        /* --- HERO SECTION --- */
-        .hero-section {
-            background-color: #eaeded; 
-            position: relative;
-            height: 350px;
-            background-image: linear-gradient(to bottom, transparent 10%, #f3a847 100%), url('https://placehold.co/1500x600/232f3e/white?text=Welcome+to+Ak+Store');
-          
-            background-size:cover;
-            background-position: center;
-            margin-bottom: -150px;
-            z-index: 1;
-        }
+       
 
         /* Unique AK Store Section Styling */
 .ak-store-unique-section {
@@ -431,3 +420,4 @@
             color: #B12704; /* Amazon Red Price Color */
 
         }
+
