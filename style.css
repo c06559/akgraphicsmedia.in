@@ -311,7 +311,7 @@
             text-align: right;
             padding: 15px;
                 margin-right: 20px;
-            font-size: 15px;
+            font-size: 30px;
             font-weight: bold;
             cursor: pointer;
         }
@@ -501,4 +501,5 @@
             display: inline-block;
             margin-top: 30px;
         }
+
 
