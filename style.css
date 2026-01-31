@@ -1,4 +1,4 @@
-
+        
         /* --- RESET & BASIC STYLES --- */
         * {
             box-sizing: border-box;
@@ -306,7 +306,7 @@
         }
         /*   Back to Top   */
         .back-to-top {
-            background-color: #37475a;
+           width: fit-content;
             color: white;
             text-align: right;
             padding: 15px;
@@ -501,5 +501,6 @@
             display: inline-block;
             margin-top: 30px;
         }
+
 
 
