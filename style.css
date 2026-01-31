@@ -304,13 +304,14 @@
             margin-top: 40px;
             font-size: 12px;
         }
-        
+        /*   Back to Top   */
         .back-to-top {
             background-color: #37475a;
             color: white;
-            text-align: center;
+            text-align: right;
             padding: 15px;
-            font-size: 13px;
+                margin-right: 20px;
+            font-size: 15px;
             font-weight: bold;
             cursor: pointer;
         }
@@ -500,3 +501,4 @@
             display: inline-block;
             margin-top: 30px;
         }
+
