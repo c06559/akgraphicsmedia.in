@@ -421,3 +421,82 @@
 
         }
 
+
+/*   Blogs CSS Now Start Here    */
+#ak-mega-encyclopedia {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #2c3e50;
+            line-height: 1.8;
+            background: #fff;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .ak-section-wrapper {
+            margin-bottom: 80px;
+            padding: 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .ak-category-header {
+            font-size: 3rem;
+            color: #0984e3;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            border-left: 10px solid #0984e3;
+            padding-left: 20px;
+        }
+
+        .ak-sub-topic {
+            font-size: 1.8rem;
+            color: #d63031;
+            margin-top: 40px;
+        }
+
+        .ak-detailed-text {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .ak-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .ak-info-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .ak-highlight-yellow {
+            background: #fff9c4;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        #ak-global-cta {
+            text-align: center;
+            background: #2d3436;
+            color: white;
+            padding: 60px;
+            border-radius: 20px;
+        }
+
+        .ak-btn-final {
+            background: #00cec9;
+            color: #fff;
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 30px;
+        }
