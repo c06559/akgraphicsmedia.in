@@ -24,19 +24,21 @@ function searchProducts() {
 document.getElementById('searchInput').addEventListener('keyup', searchProducts);
 
 
-<script>
 document.querySelectorAll('.dropbtn').forEach(btn => {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function (e) {
+        e.preventDefault();
 
-        const dropdown = this.parentElement;
+        const parent = this.parentElement;
 
-        // Close other open menus
+        // Close others
         document.querySelectorAll('.dropdown').forEach(d => {
-            if (d !== dropdown) d.classList.remove('active');
+            if (d !== parent) d.classList.remove('active');
         });
 
-        // Toggle current
-        dropdown.classList.toggle('active');
+        parent.classList.toggle('active');
     });
 });
-</script>
+
+document.querySelector('.all-btn').addEventListener('click', function () {
+    document.querySelector('.sub-header').classList.toggle('show');
+});
