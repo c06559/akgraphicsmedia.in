@@ -215,12 +215,16 @@
     .dropdown.active .dropdown-content {
         display: block;
     }
+        .all-btn{
+                display: flex;
+        }
 }
 
 
 
         /* Style for the "All" button */
         .all-btn {
+        display: none;
             font-weight: bold;
             margin-right: 10px;
             cursor: pointer;
@@ -555,6 +559,7 @@
             display: inline-block;
             margin-top: 30px;
         }
+
 
 
 
