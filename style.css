@@ -166,6 +166,65 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+/* 📱 Mobile View */
+@media (max-width: 768px) {
+
+    .sub-header {
+        flex-direction: column;
+        height: auto;
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .dropdown {
+        width: 100%;
+        border-bottom: 1px solid #444;
+    }
+
+    .dropbtn {
+        width: 100%;
+        justify-content: space-between;
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: #1f2937;
+        min-width: 100%;
+        display: none;
+    }
+
+    .dropdown-content a {
+        color: #fff;
+        padding: 12px 20px;
+        border-bottom: 1px solid #374151;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #111827;
+        color: #f59e0b;
+    }
+
+    /* Disable hover on mobile */
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown.active .arrow {
+        transform: rotate(180deg);
+    }
+}
+
 
         /* Style for the "All" button */
         .all-btn {
@@ -503,6 +562,7 @@
             display: inline-block;
             margin-top: 30px;
         }
+
 
 
 
