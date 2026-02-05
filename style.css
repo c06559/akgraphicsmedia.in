@@ -168,6 +168,13 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+ /* Style for the "All" button */
+        .all-btn {
+        display: none;
+            font-weight: bold;
+            margin-right: 10px;
+            cursor: pointer;
+        }
 /* 📱 Mobile View */
 /* Menu Page */
 @media (max-width: 768px) {
@@ -223,13 +230,7 @@
 
 
 
-        /* Style for the "All" button */
-        .all-btn {
-        display: none;
-            font-weight: bold;
-            margin-right: 10px;
-            cursor: pointer;
-        }
+       
        
 
         /* Unique AK Store Section Styling */
@@ -560,6 +561,7 @@
             display: inline-block;
             margin-top: 30px;
         }
+
 
 
 
