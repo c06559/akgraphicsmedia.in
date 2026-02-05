@@ -224,7 +224,7 @@
         display: block;
     }
         .all-btn{
-                display: flex;
+                display: flex!important;
         }
 }
 
@@ -561,6 +561,7 @@
             display: inline-block;
             margin-top: 30px;
         }
+
 
 
 
