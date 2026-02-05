@@ -20,4 +20,23 @@ function searchProducts() {
 }
 
 // Extra Feature: Taaki button na dabana pade, type karte hi search ho jaye
+
 document.getElementById('searchInput').addEventListener('keyup', searchProducts);
+
+
+<script>
+document.querySelectorAll('.dropbtn').forEach(btn => {
+    btn.addEventListener('click', function () {
+
+        const dropdown = this.parentElement;
+
+        // Close other open menus
+        document.querySelectorAll('.dropdown').forEach(d => {
+            if (d !== dropdown) d.classList.remove('active');
+        });
+
+        // Toggle current
+        dropdown.classList.toggle('active');
+    });
+});
+</script>
