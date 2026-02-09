@@ -1,157 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | Terminal</title>
-    <style>
-        /* Modern Terminal Aesthetic */
-        body {
-            background-color: #0d1117;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Fira Code', 'Courier New', Courier, monospace;
-        }
-
-        .terminal-container {
-            width: 90%;
-            max-width: 700px;
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-            overflow: hidden;
-        }
-
-        /* Window Header Bar */
-        .terminal-header {
-            background: #21262d;
-            padding: 12px;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #30363d;
-        }
-
-        .dot {
-            height: 12px;
-            width: 12px;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
-
-        .red { background: #ff5f56; }
-        .yellow { background: #ffbd2e; }
-        .green { background: #27c93f; }
-
-        .title {
-            color: #8b949e;
-            font-size: 13px;
-            margin-left: 10px;
-            letter-spacing: 0.5px;
-        }
-
-        /* Terminal Text Area */
-        .terminal-body {
-            padding: 25px;
-            color: #79c0ff; /* GitHub's bright blue */
-            font-size: 16px;
-            line-height: 1.6;
-            min-height: 200px;
-        }
-
-        .command { color: #aff5b4; } /* Green for commands */
-        .output { color: #c9d1d9; }  /* Off-white for general text */
-        .warning { color: #ffa657; } /* Orange for warnings/status */
-
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background-color: #58a6ff;
-            vertical-align: middle;
-            margin-left: 4px;
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            from, to { background-color: transparent; }
-            50% { background-color: #58a6ff; }
-        }
-    </style>
+   <title>Laptop Bags – Stylish, Protective & Travel-Friendly</title>
+<meta name="description" content="Discover laptop bags with padded protection, smart storage and stylish designs. Perfect for office, travel and daily use for professionals and students." />
+    <link rel="canonical" href="https://akgraphicsmedia.in/laptop_bags" />
+   
+    <link rel="stylesheet" href="style.css">
+    
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-THFD3LJZ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THFD3LJZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+     <header>
+        <div class="logo"><a href="/">AK<span>Store</span></a></div>
+        
+        <div class="location">
+            <span>Delivering to</span>
+            <strong>India</strong>
+        </div>
 
-<div class="terminal-container">
-    <div class="terminal-header">
-        <div class="dot red"></div>
-        <div class="dot yellow"></div>
-        <div class="dot green"></div>
-        <span class="title">guest@portfolio: ~/coming-soon</span>
+        <div class="search-container">
+            <select class="search-select">
+                <option value="all">All</option>
+            </select>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search AK Graphics Media...">
+            <button class="search-btn" onclick="searchProducts()">🔍</button>
+        </div>
+        
+        </header>
+<div class="all-btn">☰ All</div>
+    <div class="sub-header">
+        
+
+        <div class="dropdown">
+            <button class="dropbtn">Mobiles & Accessories ▼</button>
+            <div class="dropdown-content">
+                <a href="mobile">Mobiles</a>
+                <a href="mobile_covers">Mobile Covers</a>
+                <a href="chargers_cables">Chargers & Cables</a>
+                <a href="powerbanks">Powerbanks</a>
+                <a href="mobile_stands">Mobile Stands</a>
+                <a href="earphones">Earphones</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Laptops & Accessories ▼</button>
+            <div class="dropdown-content">
+                <a href="gaming_laptops">Gaming Laptops</a>
+                <a href="office_laptops">Office Laptops</a>
+                <a href="mouse_keyboards">Mouse & Keyboards</a>
+                <a href="laptop_bags">Laptop Bags</a>
+                <a href="hard_drives">Hard Drives / SSD</a>
+                <a href="pen_drives">Pen Drives</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Watches ▼</button>
+            <div class="dropdown-content">
+                <a href="smartwatches">Smartwatches</a>
+                <a href="men_watches">Men's Watches</a>
+                <a href="women_watches">Women's Watches</a>
+                <a href="kids_watches">Kids' Watches</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Home & Kitchen ▼</button>
+            <div class="dropdown-content">
+                <a href="kitchen_appliances">Kitchen Appliances</a>
+                <a href="home_decore">Home Decor</a>
+                <a href="bedding">Bedding</a>
+                <a href="furniture">Furniture</a>
+                <a href="lighting">Lighting</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Fashion ▼</button>
+            <div class="dropdown-content">
+                <a href="men_clothings">Men's Clothing</a>
+                <a href="women_clothings">Women's Clothing</a>
+                <a href="kids_fashions">Kids' Fashions</a>
+                <a href="shoes_footwear">Shoes & Footwear</a>
+                <a href="bags_luggage">Bags & Luggage</a>
+            </div>
+        </div>
+
     </div>
-    <div class="terminal-body">
-        <span id="typewriter"></span><span class="cursor"></span>
-    </div>
+
+<section class="ak-section-wrapper">
+<h1 class="ak-category-header">Laptop Bags – Protection, Comfort & Professional Style</h1>
+
+
+<p class="ak-detailed-text">
+Laptop bags laptops ko safe rakhne ke saath-saath aapke overall look ko bhi enhance karte hain.
+Office, college ya travel ke liye ek achha laptop bag comfort, durability aur smart storage provide karta hai.
+Modern laptop bags functionality aur style ka perfect combination hote hain.
+</p>
+
+
+<h3 class="ak-sub-topic">Types of Laptop Bags</h3>
+<p class="ak-detailed-text">
+Alag-alag usage aur preferences ke according laptop bags ke multiple types available hote hain.
+Har type ka design specific need ko dhyaan mein rakhkar banaya jata hai.
+</p>
+
+
+<div class="ak-info-grid">
+<div class="ak-info-card">
+<h4>Laptop Backpacks</h4>
+<p>
+Travel aur daily commute ke liye comfortable backpacks with laptop protection.
+</p>
+</div>
+<div class="ak-info-card">
+<h4>Laptop Messenger & Office Bags</h4>
+<p>
+Professional look ke liye slim aur stylish laptop office bags.
+</p>
+</div>
 </div>
 
-<script>
-    const content = [
-        { text: "visitor@github:~$ ", type: "command" },
-        { text: "npm install future-project\n", type: "output" },
-        { text: "Fetching packages...\n", type: "output" },
-        { text: "Success: ", type: "output" },
-        { text: "COMING_SOON.v1.0.0 installed.\n", type: "warning" },
-        { text: "System Status: ", type: "output" },
-        { text: "In Development\n", type: "warning" },
-        { text: "Launch Window: ", type: "output" },
-        { text: "Spring 2026\n", type: "command" },
-        { text: "visitor@github:~$ ", type: "command" },
-        { text: "ping status...", type: "output" }
-    ];
 
-    const target = document.getElementById("typewriter");
-    let lineIndex = 0;
-    let charIndex = 0;
+<h3 class="ak-sub-topic">Protection & Storage</h3>
+<p class="ak-detailed-text">
+Laptop bags ka main purpose device ko damage se protect karna hota hai.
+Padded compartments aur multiple pockets better organization ensure karte hain.
+</p>
 
-    function type() {
-        if (lineIndex < content.length) {
-            let currentLine = content[lineIndex];
-            
-            // Create a span for the style if we are at the start of a new segment
-            if (charIndex === 0) {
-                const span = document.createElement("span");
-                span.className = currentLine.type;
-                span.id = "line-" + lineIndex;
-                target.appendChild(span);
-            }
 
-            let span = document.getElementById("line-" + lineIndex);
-            let char = currentLine.text.charAt(charIndex);
-            
-            // Handle line breaks
-            if (char === "\n") {
-                span.innerHTML += "<br>";
-            } else {
-                span.innerHTML += char;
-            }
+<div class="ak-info-grid">
+<div class="ak-info-card">
+<h4>Padded Laptop Compartments</h4>
+<p>
+Shock-absorbent padding jo laptop ko bumps aur scratches se bachata hai.
+</p>
+</div>
+<div class="ak-info-card">
+<h4>Smart Storage Pockets</h4>
+<p>
+Chargers, mouse, documents aur accessories ke liye organized space.
+</p>
+</div>
+</div>
 
-            charIndex++;
 
-            if (charIndex < currentLine.text.length) {
-                setTimeout(type, 40); // Typing speed
-            } else {
-                charIndex = 0;
-                lineIndex++;
-                setTimeout(type, 300); // Delay between lines
-            }
-        }
-    }
+<h3 class="ak-sub-topic">Comfort & Build Quality</h3>
+<p class="ak-detailed-text">
+Comfortable straps aur strong material laptop bags ko long-term use ke liye suitable banate hain.
+Lightweight design daily carrying ko easy aur stress-free banata hai.
+</p>
 
-    // Initialize typing
-    window.onload = type;
-</script>
 
+<div class="ak-info-grid">
+<div class="ak-info-card">
+<h4>Ergonomic Design</h4>
+<p>
+Adjustable shoulder straps aur breathable back panels for all-day comfort.
+</p>
+</div>
+<div class="ak-info-card">
+<h4>Durable & Water-Resistant Material</h4>
+<p>
+Strong fabric jo daily wear and tear aur light rain se protection deta hai.
+</p>
+</div>
+</div>
+
+
+<h3 class="ak-sub-topic">Choosing the Right Laptop Bag</h3>
+<p class="ak-detailed-text">
+Laptop bag choose karte waqt laptop size, usage, comfort aur design ko consider karna chahiye.
+Sahi laptop bag aapke device ko safe rakhne ke saath aapki daily routine ko bhi convenient bana deta hai.
+</p>
+</section>
+    
+
+    
+   <footer>
+    <div class="back-to-top" onclick="window.scrollTo(0,0)"><i class="fa-solid fa-circle-chevron-up"></i></div>
+        <p>© 2026, Akgraphicsmedia.in. All rights reserved.</p>
+        <div><a href="blogs">Our Blogs</a> </div>
+    </footer>
+
+
+ <script src="https://kit.fontawesome.com/2ae29d8860.js" crossorigin="anonymous"></script>  
+    <script src="script1.js"></script>
 </body>
+
+
 </html>
