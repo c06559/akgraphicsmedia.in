@@ -1,157 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | Terminal</title>
-    <style>
-        /* Modern Terminal Aesthetic */
-        body {
-            background-color: #0d1117;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Fira Code', 'Courier New', Courier, monospace;
-        }
-
-        .terminal-container {
-            width: 90%;
-            max-width: 700px;
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-            overflow: hidden;
-        }
-
-        /* Window Header Bar */
-        .terminal-header {
-            background: #21262d;
-            padding: 12px;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #30363d;
-        }
-
-        .dot {
-            height: 12px;
-            width: 12px;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
-
-        .red { background: #ff5f56; }
-        .yellow { background: #ffbd2e; }
-        .green { background: #27c93f; }
-
-        .title {
-            color: #8b949e;
-            font-size: 13px;
-            margin-left: 10px;
-            letter-spacing: 0.5px;
-        }
-
-        /* Terminal Text Area */
-        .terminal-body {
-            padding: 25px;
-            color: #79c0ff; /* GitHub's bright blue */
-            font-size: 16px;
-            line-height: 1.6;
-            min-height: 200px;
-        }
-
-        .command { color: #aff5b4; } /* Green for commands */
-        .output { color: #c9d1d9; }  /* Off-white for general text */
-        .warning { color: #ffa657; } /* Orange for warnings/status */
-
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background-color: #58a6ff;
-            vertical-align: middle;
-            margin-left: 4px;
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            from, to { background-color: transparent; }
-            50% { background-color: #58a6ff; }
-        }
-    </style>
+   <title>Mobile Stands Online – Adjustable, Foldable & Car Mobile Holders</title>
+<meta name="description" content="Buy high-quality mobile stands for desk, office, car, and content creation. Explore adjustable, foldable, and anti-slip mobile holders designed for stability, comfort, and hands-free viewing." />
+    <link rel="canonical" href="https://akgraphicsmedia.in/mobile_stands" />
+   
+    <link rel="stylesheet" href="style.css">
+    
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-THFD3LJZ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THFD3LJZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+     <header>
+        <div class="logo"><a href="/">AK<span>Store</span></a></div>
+        
+        <div class="location">
+            <span>Delivering to</span>
+            <strong>India</strong>
+        </div>
 
-<div class="terminal-container">
-    <div class="terminal-header">
-        <div class="dot red"></div>
-        <div class="dot yellow"></div>
-        <div class="dot green"></div>
-        <span class="title">guest@portfolio: ~/coming-soon</span>
+        <div class="search-container">
+            <select class="search-select">
+                <option value="all">All</option>
+            </select>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search AK Graphics Media...">
+            <button class="search-btn" onclick="searchProducts()">🔍</button>
+        </div>
+        
+        </header>
+<div class="all-btn">☰ All</div>
+    <div class="sub-header">
+        
+
+        <div class="dropdown">
+            <button class="dropbtn">Mobiles & Accessories ▼</button>
+            <div class="dropdown-content">
+                <a href="mobile">Mobiles</a>
+                <a href="mobile_covers">Mobile Covers</a>
+                <a href="chargers_cables">Chargers & Cables</a>
+                <a href="powerbanks">Powerbanks</a>
+                <a href="mobile_stands">Mobile Stands</a>
+                <a href="earphones">Earphones</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Laptops & Accessories ▼</button>
+            <div class="dropdown-content">
+                <a href="gaming_laptops">Gaming Laptops</a>
+                <a href="office_laptops">Office Laptops</a>
+                <a href="mouse_keyboards">Mouse & Keyboards</a>
+                <a href="laptop_bags">Laptop Bags</a>
+                <a href="hard_drives">Hard Drives / SSD</a>
+                <a href="pen_drives">Pen Drives</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Watches ▼</button>
+            <div class="dropdown-content">
+                <a href="smartwatches">Smartwatches</a>
+                <a href="men_watches">Men's Watches</a>
+                <a href="women_watches">Women's Watches</a>
+                <a href="kids_watches">Kids' Watches</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Home & Kitchen ▼</button>
+            <div class="dropdown-content">
+                <a href="kitchen_appliances">Kitchen Appliances</a>
+                <a href="home_decore">Home Decor</a>
+                <a href="bedding">Bedding</a>
+                <a href="furniture">Furniture</a>
+                <a href="lighting">Lighting</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"> Fashion ▼</button>
+            <div class="dropdown-content">
+                <a href="men_clothings">Men's Clothing</a>
+                <a href="women_clothings">Women's Clothing</a>
+                <a href="kids_fashions">Kids' Fashions</a>
+                <a href="shoes_footwear">Shoes & Footwear</a>
+                <a href="bags_luggage">Bags & Luggage</a>
+            </div>
+        </div>
+
     </div>
-    <div class="terminal-body">
-        <span id="typewriter"></span><span class="cursor"></span>
-    </div>
+<section class="ak-section-wrapper">
+<h1 class="ak-category-header">Mobile Stands – Smart Support for Everyday Convenience</h1>
+
+<p class="ak-detailed-text">
+Aaj ke digital lifestyle mein mobile stand ek essential accessory ban chuka hai. Chahe aap work-from-home kar rahe ho, online classes attend kar rahe ho, ya entertainment ke liye movies dekh rahe ho — ek stable aur adjustable mobile stand aapko hands-free comfort provide karta hai.
+</p>
+
+<p class="ak-detailed-text">
+Mobile stands sirf convenience hi nahi dete, balki aapke posture ko bhi improve karte hain. Bar-bar phone haath mein pakadne ki zarurat nahi hoti, jis se neck strain aur hand fatigue kam hota hai. Ek organized desk setup ke liye bhi mobile stand bahut useful hota hai.
+</p>
+
+<h3 class="ak-sub-topic">Why You Need a Mobile Stand</h3>
+<p class="ak-detailed-text">
+Modern lifestyle mein multitasking common hai. Ek achha mobile holder aapko ek hi time par multiple tasks manage karne mein help karta hai.
+</p>
+
+<div class="ak-info-grid">
+<div class="ak-info-card">
+<h4>Video Calls & Meetings</h4>
+<p>
+Online meetings, Zoom calls aur virtual classes ke liye perfect viewing angle provide karta hai.
+</p>
+</div>
+<div class="ak-info-card">
+<h4>Entertainment & Streaming</h4>
+<p>
+Movies, reels aur YouTube videos dekhne ke liye stable aur comfortable support deta hai.
+</p>
+</div>
 </div>
 
-<script>
-    const content = [
-        { text: "visitor@github:~$ ", type: "command" },
-        { text: "npm install future-project\n", type: "output" },
-        { text: "Fetching packages...\n", type: "output" },
-        { text: "Success: ", type: "output" },
-        { text: "COMING_SOON.v1.0.0 installed.\n", type: "warning" },
-        { text: "System Status: ", type: "output" },
-        { text: "In Development\n", type: "warning" },
-        { text: "Launch Window: ", type: "output" },
-        { text: "Spring 2026\n", type: "command" },
-        { text: "visitor@github:~$ ", type: "command" },
-        { text: "ping status...", type: "output" }
-    ];
+<h3 class="ak-sub-topic">Types of Mobile Stands</h3>
+<p class="ak-detailed-text">
+Mobile stands alag-alag designs aur usage ke according available hote hain. Har need aur environment ke liye suitable options mil jate hain.
+</p>
 
-    const target = document.getElementById("typewriter");
-    let lineIndex = 0;
-    let charIndex = 0;
+<div class="ak-info-grid">
+<div class="ak-info-card">
+<h4>Adjustable Table Stands</h4>
+<p>
+Height aur angle adjustable stands jo desk par stable support dete hain aur daily use ke liye perfect hote hain.
+</p>
+</div>
+<div class="ak-info-card">
+<h4>Foldable & Portable Stands</h4>
+<p>
+Compact aur lightweight design jo travel aur outdoor use ke liye easy to carry hote hain.
+</p>
+</div>
+<div class="ak-info-card">
+<h4>Car Mobile Holders</h4>
+<p>
+Driving ke dauran safe navigation ke liye secure grip wale holders jo dashboard ya AC vent par fit ho jate hain.
+</p>
+</div>
+<div class="ak-info-card">
+<h4>Flexible & Tripod Stands</h4>
+<p>
+Content creation, video recording aur live streaming ke liye stable aur adjustable support provide karte hain.
+</p>
+</div>
+</div>
 
-    function type() {
-        if (lineIndex < content.length) {
-            let currentLine = content[lineIndex];
-            
-            // Create a span for the style if we are at the start of a new segment
-            if (charIndex === 0) {
-                const span = document.createElement("span");
-                span.className = currentLine.type;
-                span.id = "line-" + lineIndex;
-                target.appendChild(span);
-            }
+<h3 class="ak-sub-topic">Design & Build Quality</h3>
+<p class="ak-detailed-text">
+Mobile stand ki build quality uski durability aur stability ko decide karti hai. Strong material aur anti-slip design device ko safe aur scratch-free rakhte hain.
+</p>
 
-            let span = document.getElementById("line-" + lineIndex);
-            let char = currentLine.text.charAt(charIndex);
-            
-            // Handle line breaks
-            if (char === "\n") {
-                span.innerHTML += "<br>";
-            } else {
-                span.innerHTML += char;
-            }
+<div class="ak-info-grid">
+<div class="ak-info-card">
+<h4>Metal & ABS Material</h4>
+<p>
+High-quality metal aur ABS plastic se bane stands jo long-lasting aur sturdy support provide karte hain.
+</p>
+</div>
+<div class="ak-info-card">
+<h4>Anti-Slip Protection</h4>
+<p>
+Rubber padding aur firm base jo phone ko slip hone se bachata hai aur extra safety deta hai.
+</p>
+</div>
+</div>
 
-            charIndex++;
+<h3 class="ak-sub-topic">Choosing the Right Mobile Stand</h3>
+<p class="ak-detailed-text">
+Mobile stand choose karte waqt compatibility, stability, portability aur material quality ko consider karna chahiye. Sahi mobile stand aapke daily tasks ko easy banata hai aur better viewing experience provide karta hai.
+</p>
 
-            if (charIndex < currentLine.text.length) {
-                setTimeout(type, 40); // Typing speed
-            } else {
-                charIndex = 0;
-                lineIndex++;
-                setTimeout(type, 300); // Delay between lines
-            }
-        }
-    }
+<p class="ak-detailed-text">
+Chahe aap office use ke liye stand dhoond rahe ho, car navigation ke liye holder chahte ho ya content creation ke liye flexible tripod — ek reliable mobile stand aapke smartphone experience ko aur bhi convenient bana deta hai.
+</p>
+</section>
 
-    // Initialize typing
-    window.onload = type;
-</script>
 
+    
+
+    
+   <footer>
+    <div class="back-to-top" onclick="window.scrollTo(0,0)"><i class="fa-solid fa-circle-chevron-up"></i></div>
+        <p>© 2026, Akgraphicsmedia.in. All rights reserved.</p>
+        <div><a href="blogs">Our Blogs</a> </div>
+    </footer>
+
+
+ <script src="https://kit.fontawesome.com/2ae29d8860.js" crossorigin="anonymous"></script>  
+    <script src="script1.js"></script>
 </body>
+
+
 </html>
