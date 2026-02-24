@@ -562,6 +562,60 @@
             margin-top: 30px;
         }
 
+/* 🔽 Mobile Specific (Small Screens) */
+@media (max-width: 768px) {
+
+    .ak-category-header {
+        font-size: 20px;
+    }
+
+    .ak-sub-topic {
+        font-size: 16px;
+    }
+
+    .ak-detailed-text {
+        font-size: 13px;
+    }
+
+    /* Single column for mobile */
+    .ak-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ak-info-card {
+        padding: 14px;
+    }
+
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+
+    .ak-section-wrapper {
+        padding: 10px;
+    }
+
+    .ak-category-header {
+        font-size: 18px;
+    }
+
+    .ak-sub-topic {
+        font-size: 15px;
+    }
+
+    .ak-detailed-text {
+        font-size: 12.5px;
+    }
+
+    .ak-info-card h4 {
+        font-size: 14px;
+    }
+
+    .ak-info-card p {
+        font-size: 12px;
+    }
+
+}
 
 
 
