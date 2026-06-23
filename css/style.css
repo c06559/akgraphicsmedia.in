@@ -9,7 +9,17 @@ body{
   line-height:1.6;
   color:#333;
 }
+.logo img{
+    width:180px;
+    height:auto;
+    display:block;
+}
 
+@media(max-width:576px){
+    .logo img{
+        width:140px;
+    }
+}
 .container{
   width:90%;
   max-width:1200px;
