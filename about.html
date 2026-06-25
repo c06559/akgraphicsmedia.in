@@ -5,12 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | NS Ecom Operations Hub</title>
   <link rel="stylesheet" href="css/style.css">
+  <script>
+if (window.location.pathname.endsWith('/about.html')) {
+  window.location.replace(
+    window.location.origin +
+    window.location.pathname.replace('/about.html', '/') +
+    window.location.search +
+    window.location.hash
+  );
+}
+</script>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-    <div class="logo">
+    <div class="container nav-container">
+     <div class="logo">
     <a href="index.html">
         <img src="images/logo.png" alt="NS Ecom Operations Hub Logo">
     </a>
@@ -56,9 +67,12 @@
   </div>
 </section>
 
-<footer>
-  <p>© 2026 NS Ecom Operations Hub</p>
-</footer>
+<!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 NS Ecom Operations Hub. All Rights Reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
